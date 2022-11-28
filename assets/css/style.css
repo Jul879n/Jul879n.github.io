@@ -252,11 +252,6 @@ footer .icono:hover .fa-brands {
   color: #990D00 !important;
 }
 
-.no-ver-movil {
-  visibility: visible;
-  position: relative;
-}
-
 .ver-movil {
   visibility: hidden;
   position: absolute;
