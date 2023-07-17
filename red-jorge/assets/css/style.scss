@@ -1,0 +1,153 @@
+/*variables*/
+$color-text-btn: #fff;
+/*variables*/
+/*mixins*/
+/*mixins*/
+/*tema claro */
+.tema-claro
+{
+  background-image: url(../img/tema-claro.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.tema-claro .text-tema
+{
+    color: rgb(6, 19, 61);
+}
+.tema-claro .text-secundario{
+    color: rgb(6, 19, 61);
+}
+.tema-claro .btn-tema-nav
+{
+  background: rgba(104, 255, 95, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(104, 255, 95, 0.3);
+}
+
+.tema-claro .bg-tema
+{
+  background: rgba(104, 255, 95, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(104, 255, 95, 0.3);
+}
+.tema-claro .btn-tema{
+    /* From https://css.glass */
+background: rgba(0, 73, 19, 0.61);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(0, 73, 19, 0.3);
+color: $color-text-btn;
+}
+/*tema oscuro */
+.tema-oscuro
+{
+  background-image: url(../img/tema-oscuro.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.tema-oscuro .text-tema
+{
+  color: rgb(6, 19, 61);
+}
+
+.tema-oscuro .btn-tema-nav
+{
+  color: #fff !important;
+  background: rgba(6, 19, 61, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(6, 19, 61, 0.3);
+}
+.tema-oscuro .btn-tema{
+    /* From https://css.glass */
+background: rgba(0, 3, 73, 0.61);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(0, 3, 73, 0.3);
+color: $color-text-btn;
+}
+.tema-oscuro .bg-tema
+{
+  color: #fff !important;
+  background: rgba(6, 19, 61, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(6, 19, 61, 0.3);
+}
+.tema-oscuro .text-secundario{
+    color: #fff;
+}
+.vidrio
+{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.vidrio-nav
+{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 0px 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 0px 0px 16px 16px;
+  -moz-border-radius: 0px 0px 16px 16px;
+  -ms-border-radius: 0px 0px 16px 16px;
+  -o-border-radius: 0px 0px 16px 16px;
+}
+
+.vidrio-footer
+{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px 16px 0px 0px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 16px 16px 0px 0px;
+  -moz-border-radius: 16px 16px 0px 0px;
+  -ms-border-radius: 16px 16px 0px 0px;
+  -o-border-radius: 16px 16px 0px 0px;
+}
+
+#contenido
+{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#servicios .card
+{
+  height: 100%;
+}
+
+.logo
+{
+  width: 100px;
+  height: auto;
+}
