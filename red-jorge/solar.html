@@ -1,0 +1,55 @@
+<form class=" mt-3 mb-2" id="form1">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Cantidad de Paneles Solares</h2>
+            <label class="form-label" for="energia">Energía Necesaria (W)</label>
+            <input class="form-control" type="number" id="energia" name="energia" min="0">
+            <label class="form-label" for="hora">Hora Solar Pico (HRS)</label>
+            <input class="form-control" type="number" id="hora" name="hora" min="0">
+            <label class="form-label" for="potencia">Potencia Panel Solar (W)</label>
+            <input class="form-control" type="number" id="potencia" name="potencia" min="0">
+            <label class="form-label" for="eficencia">Eficencia Panel(%)</label>
+            <input class="form-control" type="number" id="eficencia" name="eficencia" min="0">
+            <label class="form-label" for="resultado">Cantidad de Paneles Solares</label>
+            <input class="form-control" type="text" id="resultado" name="resultado" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-paneles" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form class=" mt-3 mb-2" id="form2">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Cantidad de Baterias</h2>
+            <label class="form-label" for="energia">Energía Necesaria (W)</label>
+            <input class="form-control" type="number" id="energia" name="energia" min="0">
+            <label class="form-label" for="dias">Días de Autonomia (DIAS)</label>
+            <input class="form-control" type="number" id="dias" name="dias" min="0">
+            <label class="form-label" for="profundidad">Profundidad de Descarga de la bateria (%)</label>
+            <input class="form-control" type="number" id="profundidad" name="profundidad" min="0">
+            <label class="form-label" for="voltaje">Voltaje Bateria (V)</label>
+            <input class="form-control" type="number" id="voltaje" name="voltaje" min="0">
+            <label class="form-label" for="capacidad">Capacidad Bateria (AH)</label>
+            <input class="form-control" type="number" id="capacidad" name="capacidad" min="0">
+            <label class="form-label" for="resultado2">Cantidad de Baterias</label>
+            <input class="form-control" type="text" id="resultado2" name="resultado2" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-bateria" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

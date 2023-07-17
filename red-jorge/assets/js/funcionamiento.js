@@ -44,6 +44,15 @@ $(document).ready(function () {
     $("#tipo-instalacion").removeClass("calc");
   });
   //cargar calculadora correspondiente al tipo seleccionado
+  $("#contenido").on("click", "#tipo-solares button", function(event) {
+    event.preventDefault();
+    $("#tipo-solares button").removeClass("btn-tema");
+    $(this).addClass("btn-tema");
+    var calc = $(this).attr("data-calc");
+    var enlace = "solar.html #form"+calc;
+    $("#ejercicio").load(enlace);
+  });
+
   $("#contenido").on("click", "#tipo-instalacion button", function(event) {
     event.preventDefault();
     $("#tipo-instalacion button").removeClass("btn-tema");
@@ -601,5 +610,26 @@ $(document).ready(function () {
     }
     var resultado = valor + " mm";
     $("#resultado8").val(resultado);
+  });
+  //calcular paneles
+  $("#contenido").on("click", "#calcular-paneles", function() {
+    var energia = Number($("#energia").val());
+    var hora = Number($("#hora").val());
+    var potencia = Number($("#potencia").val());
+    var eficencia = Number($("#eficencia").val());
+    var resultado = +energia/(hora*potencia*eficencia);
+    resultado = Math.ceil(resultado);
+    $("#resultado").val(resultado);
+  });
+  //calcular baterias
+  $("#contenido").on("click", "#calcular-bateria", function() {
+    var energia = Number($("#energia").val());
+    var dias = Number($("#dias").val());
+    var profundidad = Number($("#profundidad").val());
+    var voltaje = Number($("#voltaje").val());
+    var capacidad = Number($("#capacidad").val());
+    var resultado = ((energia*dias)/(profundidad*voltaje))/capacidad;
+    resultado = Math.ceil(resultado);
+    $("#resultado2").val(resultado);
   });
 });
