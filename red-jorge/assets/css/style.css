@@ -145,4 +145,8 @@
   height: auto;
 }
 
+.calc {
+  display: none !important;
+}
+
 /*# sourceMappingURL=style.css.map */
