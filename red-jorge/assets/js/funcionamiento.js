@@ -617,8 +617,8 @@ $(document).ready(function () {
     var hora = Number($("#hora").val());
     var potencia = Number($("#potencia").val());
     var eficencia = Number($("#eficencia").val());
-    var resultado = +energia/(hora*potencia*eficencia);
-    resultado = Math.ceil(resultado);
+    var resultado = energia/(hora*potencia*(eficencia*100));
+    
     $("#resultado").val(resultado);
   });
   //calcular baterias
