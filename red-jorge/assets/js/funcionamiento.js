@@ -13,6 +13,14 @@ $(document).ready(function () {
     $(this).find("i").toggleClass("fa-sun fa-moon");
     $("body").toggleClass("tema-claro tema-oscuro");
   });
+  $("#contenido").on("click", "#basic", function() {
+    $(this).find("i").toggleClass("fa-eye-slash fa-eye");
+    if ($("#contrasena").attr("type") == "password") {
+      $("#contrasena").attr("type", "text");
+    } else if ($("#contrasena").attr("type") == "text") {
+      $("#contrasena").attr("type", "password");
+    }
+  });
   $("#contenido").on("submit", "#login-form", function(event) {
     event.preventDefault(); // previene el comportamiento predeterminado del formulario
     // obtiene los valores del formulario
@@ -66,6 +74,7 @@ $(document).ready(function () {
   $("#contenido").on("click", ".btn-borrar", function(){
     var formId = $(this).closest('form').attr('id');
     $("#" + formId)[0].reset();
+    $("#estado").removeClass("correcto incorrecto");
   });
   
   $("#contenido").on("click", "#calcular-sombra", function() {
@@ -618,18 +627,63 @@ $(document).ready(function () {
     var potencia = Number($("#potencia").val());
     var eficencia = Number($("#eficencia").val() / 100);
     var resultado = energia/(hora*potencia*eficencia);
-    
+    resultado = Math.ceil(resultado);
     $("#resultado").val(resultado);
   });
   //calcular baterias
   $("#contenido").on("click", "#calcular-bateria", function() {
     var energia = Number($("#energia").val());
     var dias = Number($("#dias").val());
-    var profundidad = Number($("#profundidad").val());
+    var profundidad = Number($("#profundidad").val()/100);
     var voltaje = Number($("#voltaje").val());
     var capacidad = Number($("#capacidad").val());
     var resultado = ((energia*dias)/(profundidad*voltaje))/capacidad;
     resultado = Math.ceil(resultado);
     $("#resultado2").val(resultado);
+  });
+
+  //comprobar disyuntor
+  var energia;
+  var disyuntor;
+  var corrienteProteccion;
+  var resultado;
+  $("#contenido").on("keyup", "#energia", function() {
+    energia = Number($("#energia").val());
+    corrienteProteccion = ((energia/(220*0.9))*100)/90;
+   corrienteProteccion = corrienteProteccion.toFixed(2);
+   $("#corriente-proteccion").val(corrienteProteccion);
+  });
+  $("#contenido").on("click", "#comprobar-disyuntor", function() {
+   
+    disyuntor = Number($("#disyuntor").val());
+    resultado = (corrienteProteccion/disyuntor)*100;
+   if(resultado % 1 >= 0.5) { // Si el resultado tiene decimales mayores o iguales a 0.5
+    resultado = Math.ceil(resultado); // Redondear hacia arriba
+  } else { // Si el resultado tiene decimales menores a 0.5
+    resultado = Math.trunc(resultado); // Truncar el resultado
+  }
+   $("#resultado3").val(resultado + "%");
+   if (resultado <= 90){
+    $("#estado").removeClass("incorrecto");
+    $("#estado").addClass("correcto");
+  } else {
+    $("#estado").removeClass("correcto");
+    $("#estado").addClass("incorrecto");
+  }
+  });
+  $("#contenido").on("click", "#comprobar-cantidad", function() {
+   var largoPanel = Number($("#largo-panel").val());
+   var anchoPanel = Number($("#ancho-panel").val());
+   var largoLugar = Number($("#largo-lugar").val());
+   var anchoLugar = Number($("#ancho-lugar").val());
+   var resultado = (largoPanel*anchoPanel)/(largoLugar*anchoLugar);
+   resultado = Math.ceil(resultado);
+   $("#resultado4").val(resultado);
+   var largoDimension = largoLugar/largoPanel;
+   largoDimension = Math.ceil(largoDimension);
+   $("#largo-dimension").val(largoDimension);
+   var anchoDimension = anchoLugar/anchoPanel;
+   anchoDimension = Math.ceil(anchoDimension);
+   $("#ancho-dimension").val(anchoDimension);
   });
 });

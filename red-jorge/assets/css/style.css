@@ -149,4 +149,12 @@
   display: none !important;
 }
 
+.correcto {
+  background-color: green;
+}
+
+.incorrecto {
+  background-color: red;
+}
+
 /*# sourceMappingURL=style.css.map */

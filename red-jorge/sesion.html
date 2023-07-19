@@ -5,11 +5,12 @@
             <label for="email" class="form-label text-tema">Correo:</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
         </div>
-        <div class="mb-3">
-            <label for="contrasena" class="form-label text-tema">Contraseña:</label>
+        <label for="contrasena" class="form-label text-tema">Contraseña:</label>
+        <div class="input-group mb-3">
             <input type="password" class="form-control" id="contrasena" name="contrasena"
-                autocomplete="current-password">
-        </div>
+                autocomplete="current-password"  aria-describedby="basic">
+            <span class="input-group-text text-tema" id="basic"><i class="fa-solid fa-eye-slash"></i></span>
+          </div>
         <div>
             <button class="btn btn-tema rounded-pill" type="submit">Iniciar sesión</button>
         </div>
