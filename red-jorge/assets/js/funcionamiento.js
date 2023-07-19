@@ -616,8 +616,8 @@ $(document).ready(function () {
     var energia = Number($("#energia").val());
     var hora = Number($("#hora").val());
     var potencia = Number($("#potencia").val());
-    var eficencia = Number($("#eficencia").val());
-    var resultado = energia/(hora*potencia*(eficencia*100));
+    var eficencia = Number($("#eficencia").val() / 100);
+    var resultado = energia/(hora*potencia*eficencia);
     
     $("#resultado").val(resultado);
   });
