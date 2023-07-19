@@ -160,3 +160,13 @@ color: $color-text-btn;
 .incorrecto{
   background-color: red;
 }
+#logo-carga{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 100;
+  position: absolute;
+}
+.no-scroll{
+  overflow: hidden;
+}

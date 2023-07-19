@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  setTimeout(function() {
+    $("#logo-carga").fadeOut(500, function() {
+      $(this).remove();
+      $("body").removeClass("no-scroll");
+    });
+  }, 1000);
   $(".btn-nav").click(function (event) {
     event.preventDefault();
     $(".btn-nav").removeClass("active btn-tema-nav");
@@ -677,13 +683,13 @@ $(document).ready(function () {
    var largoLugar = Number($("#largo-lugar").val());
    var anchoLugar = Number($("#ancho-lugar").val());
    var resultado = (largoPanel*anchoPanel)/(largoLugar*anchoLugar);
-   resultado = Math.ceil(resultado);
+   resultado = Math.trunc(resultado);
    $("#resultado4").val(resultado);
    var largoDimension = largoLugar/largoPanel;
-   largoDimension = Math.ceil(largoDimension);
+   largoDimension = Math.trunc(largoDimension);
    $("#largo-dimension").val(largoDimension);
    var anchoDimension = anchoLugar/anchoPanel;
-   anchoDimension = Math.ceil(anchoDimension);
+   anchoDimension = Math.trunc(anchoDimension);
    $("#ancho-dimension").val(anchoDimension);
   });
 });
