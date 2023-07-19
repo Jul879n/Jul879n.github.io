@@ -682,9 +682,6 @@ $(document).ready(function () {
    var anchoPanel = Number($("#ancho-panel").val());
    var largoLugar = Number($("#largo-lugar").val());
    var anchoLugar = Number($("#ancho-lugar").val());
-   var resultado = (largoPanel*anchoPanel)/(largoLugar*anchoLugar);
-   resultado = Math.trunc(resultado);
-   $("#resultado4").val(resultado);
    var largoDimension = largoLugar/largoPanel;
    largoDimension = Math.trunc(largoDimension);
    $("#largo-dimension").val(largoDimension);
