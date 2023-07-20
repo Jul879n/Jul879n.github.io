@@ -10,11 +10,12 @@ $(document).ready(function () {
     $("body").toggleClass("tema-claro tema-oscuro");
   });
   $("#contenido").on("click", "#basic", function() {
-    $(this).find("i").toggleClass("fa-eye-slash fa-eye");
     if ($("#contrasena").attr("type") == "password") {
       $("#contrasena").attr("type", "text");
+      $("#visible").text("no ver");
     } else if ($("#contrasena").attr("type") == "text") {
       $("#contrasena").attr("type", "password");
+      $("#visible").text("ver");
     }
   });
   $("#contenido").on("submit", "#login-form", function(event) {
